@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Aviraj Infotech</title>
+
+        <!-- Css section starts -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/slicknav.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+        <link rel="stylesheet" href="assets/css/gijgo.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/animated-headline.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/style1.css">
+        <link rel="stylesheet" href="assets/css/style2.css">
+        <style>
+            
+            #ani{
+                transition: all linear 0.5s;
+            -webkit-text-stroke: 2px #d6e1f0;
+            color:rgba(5, 62, 167, 0.425) ;
+            }
+    
+            #cursor {
+                width: 20px;
+                height: 20px;
+                background-color: rgba(5, 62, 167, 0.425);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 1000;
+                transition: transform 0.1s ease-out;}
+    
+            #cursorblur {
+                width: 200px;
+                height: 200px;
+                background-color: rgba(12, 34, 235, 0.315);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 999;
+                filter: blur(20px);
+                transition: transform 0.1s ease-out;
+            }
+            .read:hover{
+                background-color: rgb(230, 230, 236);
+            }
+            
+            .services_section {
+            padding: 60px 0;
+            }
+
+            .section-tittle {
+                margin-bottom: 55px;
+            }
+
+            .service-row {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+
+            .service-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.5s ease;
+            }
+
+            .service-content .image-wrapper,
+            .service-content .text-wrapper {
+                transition: all 0.5s ease;
+                opacity: 1;
+            }
+
+            .service-content .image-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+            }
+
+            .service-content .image-wrapper img {
+                width: 70%;
+                height: auto;
+                transition: all 0.5s ease;
+            }
+
+            .service-content .text-wrapper {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    z-index: 0;
+                    text-align: left;
+                }
+
+                .service-content:hover .text-wrapper {
+                    opacity: 1;
+                    z-index: 2;
+                }
+
+                .service-content:hover .image-wrapper img {
+                    transform: scale(0.9);
+                    opacity: 0.3;
+                }
+
+                .service-content .text-wrapper .technology_text {
+                    font-size: 30px;
+                    margin-bottom: 15px;
+                }
+
+                .service-content .text-wrapper .dummy_text {
+                    font-size: 20px;
+                    color: #555;
+                }
+
+        </style>
+        <!-- Css Files Ends -->
+    </head>
+
+    <body>
+    
+        <!-- Header section starts -->
+        <header>
+            <div class="header-area header-transparent">
+                <div class="main-header ">
+                    <div class="header-bottom  header-sticky">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <!-- Logo -->
+                                <div class="col-xl-2 col-lg-2">
+                                    <div class="logo">
+                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="col-xl-10 col-lg-10">
+                                    <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                        <!-- Main-menu -->
+                                        <div class="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul id="navigation" style="margin: 10px;">                                                                                          
+                                                    <li class="active" ><a href="index.html" style=" font-size: 20px; padding: 15px 4px;">Home</a></li>
+                                                    <li><a href="about.html" style="font-size: 20px; padding: 15px 4px;" >About</a></li>
+                                                    <li><a href="courses.html" style=" font-size: 20px; padding: 15px 4px;">Courses</a>
+                                                        <ul class="submenu">
+                                                            <li><a href="courses.html#course1">Web Programming</a></li>
+                                                            <li><a href="courses.html#course2">App Development</a></li>
+                                                            <li><a href="courses.html#course3">A.I. and M.L.</a></li>
+                                                            <li><a href="courses.html#course4">Cyber Security</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#" style=" font-size: 20px; padding: 15px 4px;">IT-Services</a>
+                                                        <ul class="submenu">
+                                                            <li><a href="DronesRobotics.html">Drones & Robotics</a></li>
+                                                            <li><a href="CyberAnalysis.html">Cyber Analysis</a></li>
+                                                            <li><a href="AppDev.html">Application Development</a></li>
+                                                            <li><a href="ArtificialLearning.html">A.I Integration</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="contact.html" style=" font-size: 20px; padding: 15px 4px;">Contact</a></li>
+                                                    <!-- Button -->
+                                                    <!-- <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
+                                                    <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li> -->
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <!-- Mobile Menu -->
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header section ends -->
+        <div id="cursor"></div>
+        <div id="cursorblur"></div>
+        <!-- Slider area starts-->
+        <section class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-12">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s" id="ani">Courses</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Slider area ends -->
+    
+        <main>
+
+            <div class="about_section layout_padding" >
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-6">
+                         <h1 class="about_taital">About Us</h1>
+                         <p class="about_text">
+                            Students gain hands-on experience creating dynamic websites, user-friendly mobile applications, advanced AI models, and robust cybersecurity measures. These essential tech skills prepare them for rewarding careers in technology, enabling them to solve complex challenges and drive innovation in a rapidly evolving digital world.
+                            <br><br>
+                            Our courses cover Web Programming, App Development, AI, Machine Learning, and Cyber Security. They equip students with critical technical skills for today’s digital landscape, fostering innovation and proficiency in designing, developing, and securing advanced technological solutions across diverse industries and applications.
+                        </p>
+                         <div class="read_bt"><a class="read" href="about.html" >Read More</a></div>
+                      </div>
+                      <div class="col-md-6">
+                        <h1 class="about_taital">About Us</h1>
+                        <p class="about_text">Students engage in real-world projects that enhance their understanding and application of theoretical concepts. This project-based learning approach ensures they are well-prepared to tackle industry challenges, work effectively in teams, and think critically to develop innovative solutions.
+                            <br><br>
+                            We also provide certificates upon course completion, validating students' expertise and enhancing their professional credentials. Our instructors, who are industry experts, offer personalized guidance and support, bringing a wealth of experience and knowledge to the classroom. This mentorship helps students build a strong foundation for their future careers in technology.
+                        </p>
+                     </div>
+                   </div>
+                </div>
+             </div>
+             <!--about section end -->
+             <!--services section start -->
+             <div class="services_section layout_padding">
+                <div class="container">
+                    <div class="section-tittle text-center mb-55">
+                        <h2>What We Do</h2>
+                    </div>
+                    <div class="row service-row" id="course1">
+                        <div class="col-md-12 service-content">
+                            <div class="image-wrapper">
+                                <div class="image_2"><img src="assets/img/gallery/web.jpg" alt="Web Programming"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <div class="box_main">
+                                    <h1 class="technology_text">Web Programming</h1>
+                                    <p class="dummy_text">Covering fundamental and advanced skills, our comprehensive curriculum equips learners with the latest tools and technologies essential for designing and developing dynamic websites and web applications...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row service-row" id="course2">
+                        <div class="col-md-12 service-content">
+                            <div class="image-wrapper">
+                                <div class="image_2"><img src="assets/img/gallery/hello.jpg" alt="App Development"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <div class="box_main">
+                                    <h1 class="technology_text">App Development</h1>
+                                    <p class="dummy_text">Explore the intricacies of creating mobile applications for Android and iOS platforms. From conceptual design to coding and deployment, gain hands-on experience in developing user-friendly interfaces...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row service-row" id="course3">
+                        <div class="col-md-12 service-content">
+                            <div class="image-wrapper">
+                                <div class="image_2"><img src="assets/img/gallery/yoyo.jpg" alt="AI & ML"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <div class="box_main">
+                                    <h1 class="technology_text">AI & ML</h1>
+                                    <p class="dummy_text">Dive into algorithms and techniques such as supervised learning, neural networks, and deep learning, gaining expertise in advanced data analysis and pattern recognition...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row service-row" id="course4">
+                        <div class="col-md-12 service-content">
+                            <div class="image-wrapper">
+                                <div class="image_2"><img src="assets/img/gallery/yoooyooo.jpg" alt="Cyber Security"></div>
+                            </div>
+                            <div class="text-wrapper">
+                                <div class="box_main">
+                                    <h1 class="technology_text">Cyber Security</h1>
+                                    <p class="dummy_text">Gain comprehensive knowledge in safeguarding systems and data against cyber threats. Explore cryptography, network security, and ethical hacking techniques...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <!--services section end -->
+             <!--software section start -->
+             
+             
+             <!--works section end -->
+            
+        </main>
+    
+    
+        <!-- Footer starts -->
+        <footer>
+
+         <!-- <div class="container" >
+             <div class="footer-content">
+                 <h3 class="h3">Contact Us</h3>
+                 <p>Email: avirajinfotechplc@gmail.com</p>
+                 <p>Phone:+91 9389477179</p>
+                 <p>Address:Jayanand Garkoti, Takana Road, Pithoragarh</p>
+             </div>
+             <div class="footer-content">
+                 <h3 class="h3">Quick Links</h3>
+                 <ul class="list">
+                     <li><a href="" class="index.html">Home</a></li>
+                     <li><a href="courses.html">Courses</a></li>
+                     <li><a href="about.html" class="aa">About</a></li>
+                     <li><a href="IT-Services.html">IT-Services</a></li>
+                     <li><a href="contact.html" class="aa">Contact</a></li>
+                 </ul>
+             </div>
+             <div class="footer-content">
+                 <h3 class="h3">Follow Us</h3>
+                 <ul class="social-icons">
+                     <li><a href="" class="aa"><i class="fab fa-facebook"></i></a></li>
+                     <li><a href="" class="aa"><i class="fab fa-instagram"></i></a></li>
+                     <li><a href="" class="aa"><i class="fab fa-linkedin"></i></a></li>
+                 </ul>
+             </div>
+         </div> -->
+         <div class="bottom-bar">
+             <p style="color: white;">&copy; 2024 Aviraj Infotech pvt. ltd. All rights reserved</p>
+         </div>
+     </footer>
+        <!-- Footer ends -->
+    
+    
+        <!-- Javascript section starts -->
+        <!-- JS here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- Jquery, Popper, Bootstrap -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+    
+        <!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
+    
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+        <!-- Nice-select, sticky -->
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+        <script src="./assets/js/jquery.sticky.js"></script>
+        <!-- Progress -->
+        <script src="./assets/js/jquery.barfiller.js"></script>
+    
+        <!-- counter , waypoint,Hover Direction -->
+        <script src="./assets/js/jquery.counterup.min.js"></script>
+        <script src="./assets/js/waypoints.min.js"></script>
+        <script src="./assets/js/jquery.countdown.min.js"></script>
+        <script src="./assets/js/hover-direction-snake.min.js"></script>
+    
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+        <!-- Jquery Plugins, main Jquery -->
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <!-- Javascript section ends -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <script>
+            var crsr = document.querySelector("#cursor");
+            var crsrblr = document.querySelector("#cursorblur");
+    
+            document.addEventListener("mousemove", (event) => {
+                const { clientX: x, clientY: y } = event;
+    
+                crsr.style.left = `${x}px`;
+                crsr.style.top = `${y}px`;
+    
+                crsrblr.style.left = `${x - 100}px`;
+                crsrblr.style.top = `${y - 100}px`;
+            });
+
+            var h4all = document.querySelectorAll("#navigation li");
+            h4all.forEach(function (elem) {
+            elem.addEventListener("mouseenter", function () {
+                crsr.style.scale = 1.5;
+                crsr.style.border = "1px solid #fff";
+                crsr.style.backgroundColor = "transparent";
+            });
+            elem.addEventListener("mouseleave", function () {
+                crsr.style.scale = 1;
+                crsr.style.border = "0px solid #95C11E";
+                crsr.style.backgroundColor = "rgba(5, 62, 167, 0.425)";
+            });
+            });
+
+
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animation for IT Services cards
+            gsap.from(".it-card", {
+                opacity: 0,
+                y: 50,
+                duration: 1.5,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: ".it-services-area",
+                    scroller: "body",
+                    start: "top 90%",
+                    end: "top 65%",
+                    scrub: 1,
+                    ease: "power1.out",
+                },
+            });
+
+            // Animation for Courses cards
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animation for IT Services cards
+            gsap.from(".it-card", {
+                opacity: 0,
+                y: 50,
+                duration: 1.5,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: ".it-card",
+                    scroller: "body",
+                    start: "top 70%",
+                    end: "top 65%",
+                    scrub: 1,
+                    ease: "power1.out",
+                },
+            });
+
+
+            // Check if the device is mobile
+const isMobile = window.innerWidth <= 768; // You can adjust the width according to your needs
+
+if (isMobile) {
+    // Animation for mobile devices
+    gsap.to(".service-content", {
+        scale: 0.95,
+        duration: 0.5,
+        ease: "power1.out",
+    });
+
+    gsap.to(".service-content .image-wrapper img", {
+        scale: 1,
+        opacity: 1,
+        duration: 0.5,
+        ease: "power1.out",
+    });
+
+    gsap.to(".service-content .text-wrapper", {
+        opacity: 1,
+        zIndex: 2,
+        duration: 0.5,
+        ease: "power1.out",
+    });
+
+    // Reset on hover for mobile
+    document.querySelectorAll('.service-content').forEach((element) => {
+        element.addEventListener('touchstart', () => {
+            gsap.to(element.querySelector('.image-wrapper img'), {
+                scale: 0.9,
+                opacity: 0.3,
+                duration: 0.5,
+                ease: "power1.out",
+            });
+
+            gsap.to(element.querySelector('.text-wrapper'), {
+                opacity: 1,
+                zIndex: 2,
+                duration: 0.5,
+                ease: "power1.out",
+            });
+        });
+
+        element.addEventListener('touchend', () => {
+            gsap.to(element.querySelector('.image-wrapper img'), {
+                scale: 1,
+                opacity: 1,
+                duration: 0.5,
+                ease: "power1.out",
+            });
+
+            gsap.to(element.querySelector('.text-wrapper'), {
+                opacity: 0,
+                zIndex: 0,
+                duration: 0.5,
+                ease: "power1.out",
+            });
+        });
+    });
+} else {
+    // Your existing desktop animations can stay as they are
+    gsap.to(".service-content:hover .image-wrapper img", {
+        transform: "scale(0.9)",
+        opacity: 0.3,
+        ease: "power1.out",
+        duration: 0.5,
+    });
+
+    gsap.to(".service-content:hover .text-wrapper", {
+        opacity: 1,
+        zIndex: 2,
+        ease: "power1.out",
+        duration: 0.5,
+    });
+}
+
+        </script>
+    </body>
+
+</html>
