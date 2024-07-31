@@ -24,79 +24,101 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-      /* Bottom Bar Styles */
-      .bottom-bar {
-        text-align: center;
-      }
-    
-      .bottom-bar p {
-        color: #fff;
-        margin: 0;
-      }
-    </style>
-        
-        <!-- Css Files Ends -->
-    </head>
+      #cursor {
+           width: 20px;
+           height: 20px;
+           background-color: rgba(5, 62, 167, 0.425);
+           border-radius: 50%;
+           position: fixed;
+           pointer-events: none;
+           z-index: 1000;
+           transition: transform 0.1s ease-out;}
 
-    <body>
-    
-      <!-- Header section starts -->
-      <header>
-        <div class="header-area header-transparent">
-            <div class="main-header ">
-                <div class="header-bottom  header-sticky">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
-                                <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-10 col-lg-10">
-                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
-                                    <!-- Main-menu -->
-                                    <div class="main-menu d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">                                                                                          
-                                                <li class="active" ><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="courses.html">Courses</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="courses.html#course1">Web Programming</a></li>
-                                                        <li><a href="courses.html#course2">App Development</a></li>
-                                                        <li><a href="courses.html#course3">A.I. and M.L.</a></li>
-                                                        <li><a href="courses.html#course4">Cyber Security</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">IT-Services</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="DronesRobotics.html">Drones & Robotics</a></li>
-                                                        <li><a href="CyberAnalysis.html">Cyber Analysis</a></li>
-                                                        <li><a href="AppDev.html">Application Development</a></li>
-                                                        <li><a href="ArtificialLearning.html">A.I Integration</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <!-- Button -->
-                                                <!-- <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li> -->
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div> 
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-      <!-- Header section ends -->
+       #cursorblur {
+           width: 200px;
+           height: 200px;
+           background-color: rgba(12, 34, 235, 0.315);
+           border-radius: 50%;
+           position: fixed;
+           pointer-events: none;
+           z-index: 999;
+           filter: blur(20px);
+           transition: transform 0.1s ease-out;
+       }
+     /* Bottom Bar Styles */
+     .bottom-bar {
+       text-align: center;
+     }
+   
+     .bottom-bar p {
+       color: #fff;
+       margin: 0;
+     }
+   </style>
+   
+   </head>
+
+   <body>
+   
+     <!-- Header section starts -->
+     <header>
+       <div class="header-area header-transparent">
+           <div class="main-header ">
+               <div class="header-bottom  header-sticky">
+                   <div class="container-fluid">
+                       <div class="row align-items-center">
+                           <!-- Logo -->
+                           <div class="col-xl-2 col-lg-2">
+                               <div class="logo">
+                                   <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                               </div>
+                           </div>
+                           <div class="col-xl-10 col-lg-10">
+                               <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                   <!-- Main-menu -->
+                                   <div class="main-menu d-none d-lg-block">
+                                       <nav>
+                                           <ul id="navigation" style="margin: 10px;">                                                                                          
+                                               <li class="active" ><a href="index.html" style=" font-size: 20px; padding: 15px 4px;">Home</a></li>
+                                               <li><a href="about.html" style="font-size: 20px; padding: 15px 4px;" >About</a></li>
+                                               <li><a href="courses.html" style=" font-size: 20px; padding: 15px 4px;">Courses</a>
+                                                   <ul class="submenu">
+                                                       <li><a href="courses.html#course1">Web Programming</a></li>
+                                                       <li><a href="courses.html#course2">App Development</a></li>
+                                                       <li><a href="courses.html#course3">A.I. and M.L.</a></li>
+                                                       <li><a href="courses.html#course4">Cyber Security</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="#" style=" font-size: 20px; padding: 15px 4px;">IT-Services</a>
+                                                   <ul class="submenu">
+                                                       <li><a href="DronesRobotics.html">Drones & Robotics</a></li>
+                                                       <li><a href="CyberAnalysis.html">Cyber Analysis</a></li>
+                                                       <li><a href="AppDev.html">Application Development</a></li>
+                                                       <li><a href="ArtificialLearning.html">A.I Integration</a></li>
+                                                   </ul>
+                                               </li>
+                                               <li><a href="contact.html" style=" font-size: 20px; padding: 15px 4px;">Contact</a></li>
+                                               <!-- Button -->
+                                               <!-- <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
+                                               <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li> -->
+                                           </ul>
+                                       </nav>
+                                   </div>
+                               </div>
+                           </div> 
+                           <!-- Mobile Menu -->
+                           <div class="col-12">
+                               <div class="mobile_menu d-block d-lg-none"></div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </header>
+   <!-- Header section ends -->
+   <div id="cursor"></div>
+   <div id="cursorblur"></div>
     
     
       <div class="hero-wrap js-fullheight" style="background-image: url('images/cyberfirst.jpg');"
@@ -424,6 +446,36 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
       <script src="js/google-map.js"></script>
       <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+      <script>
+          var crsr = document.querySelector("#cursor");
+          var crsrblr = document.querySelector("#cursorblur");
+  
+          document.addEventListener("mousemove", (event) => {
+              const { clientX: x, clientY: y } = event;
+  
+              crsr.style.left = `${x}px`;
+              crsr.style.top = `${y}px`;
+  
+              crsrblr.style.left = `${x - 100}px`;
+              crsrblr.style.top = `${y - 100}px`;
+          });
+
+          var h4all = document.querySelectorAll("#navigation li");
+          h4all.forEach(function (elem) {
+          elem.addEventListener("mouseenter", function () {
+              crsr.style.scale = 1.5;
+              crsr.style.border = "1px solid #fff";
+              crsr.style.backgroundColor = "transparent";
+          });
+          elem.addEventListener("mouseleave", function () {
+              crsr.style.scale = 1;
+              crsr.style.border = "0px solid #95C11E";
+              crsr.style.backgroundColor = "rgba(5, 62, 167, 0.425)";
+          });
+          });
+      </script>
     
     </body>
 
